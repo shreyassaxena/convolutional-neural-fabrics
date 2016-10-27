@@ -4,8 +4,8 @@
 In our work, we propose a “fabric” that embeds an exponentially large number of CNN architectures. 
 The fabrics sidesteps the tedious process of specifying, training and testing individual networks in order to find good architectures. The fabric circumvents 8 out of 10 hyperparameters of the CNN architecture and has only 2 hyperparameters. 
 
-Detailed description of the system is provided in our arXiv technical report: https://arxiv.org/abs/1606.02492 [To appear at NIPS16]. Collected resources are available at our [Project Page](lear.inrialpes.fr/~verbeek/fabrics).
-
+Detailed description of the system is provided in our arXiv technical report: https://arxiv.org/abs/1606.02492 [To appear at NIPS16]. Collected resources are available at our [Project Page][1].
+[1]: http://lear.inrialpes.fr/~verbeek/fabrics
 
 ### Citation
 
