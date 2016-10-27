@@ -1,0 +1,52 @@
+This readme is for showing how to use the trellis for training a network on MNIST.
+This package includes a pre-compiled CAFFE implementation (for Fedora platform).
+You would need to recompile it for other platforms.
+
+
+Experiment walkthrough for MNIST:
+
+In this readme we will walk you through the steps for:
+2) Generating the prototxt file (network definition) for CAFFE automatically
+3) Launching the script on a GPU/CPU
+
+
+
+Steps:
+1) Getting the data:
+We have not included MNIST data in this package. 
+You need to complete this step before you go the next step.
+You would need to pre-process MNIST on your own, and generate CAFFE format training files.
+We use text files, and you would need to replace the source field for the image data layer in 6x9_27channels.prototxt
+The images of MNIST should be pre-processed to be 32x32 in size and grayscale in color (See paper for details).
+The text files should look something like this, with the first being the full file path and second being the image label
+
+.
+.
+/scratch/gpuhost9/ssaxena/DATA/MNIST/Images_for_CNN/translate_augmentation/trainval/42765_9.png 0
+/scratch/gpuhost9/ssaxena/DATA/MNIST/Images_for_CNN/translate_augmentation/trainval/42055_15.png 3
+/scratch/gpuhost9/ssaxena/DATA/MNIST/Images_for_CNN/translate_augmentation/trainval/28605_3.png 9
+.
+.
+
+2) Go to the "./Generate_prototxt/" sub-directory in MATLAB and exectue: generate_prototxt_full_stack_MNIST_image_list(9,27).
+This will generate the network file for a trellis with 9 layers and 27 channels at each node for CPU code. 
+To generate a file for GPU, you can modify the flag: is_CPU
+The generated files would be:
+6x9_27channels.prototxt
+CPU_solver_6x9_27channels_LR_0.01.prototxt
+
+
+3) From the shell, run sh run_debug.sh present in the same directory.
+This will start training the trellis and save the snapshot in between.
+
+
+4) For evaluating sparse CNF, go to "./Generate_prototxt_sparse_connect/" and execute: generate_prototxt_full_stack_MNIST_image_list_SC(9,27)
+To train the trellis, run sh run_debug.sh
+
+
+
+The walkthrough is complete at this point.
+The code and workflow is similar for PartLabels and CIFAR-10, feel free to explore them.
+
+
+
