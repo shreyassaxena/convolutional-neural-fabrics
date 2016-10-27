@@ -33,7 +33,7 @@ If you're using this code in a publication, please cite our papers.
 ### Training CNF
 
 ** Demo on MNIST
-  0. Data: You need to download and post-process MNIST for the demo code (See demo_mnist.txt for further instructions)
+  0. Data: You need to download and post-process MNIST for the demo code (See ./MNIST/demo_mnist.txt for further instructions)
   0. Follow the steps in demo_mnist.txt
   
 
