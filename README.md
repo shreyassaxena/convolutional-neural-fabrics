@@ -8,7 +8,7 @@ Detailed description of the system is provided in our arXiv technical report: ht
 
 ### Citation
 
-If you're using this code in a publication, please cite our papers.
+If you're using this code in a publication, please cite our paper.
 
     @InProceedings{saxena2016convolutional,
       title={Convolutional Neural Fabrics},
