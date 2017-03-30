@@ -36,10 +36,11 @@ If you're using this code in a publication, please cite our paper.
 ### Training CNF
 
 ** Demo on MNIST
+
   0. Data: You need to download and post-process MNIST for the demo code (See ./MNIST/demo_mnist.txt for further instructions)
   0. Follow the steps in demo_mnist.txt
   
-### PyTorch Implementation
-[https://github.com/vabh/convolutional-neural-fabrics](https://github.com/vabh/convolutional-neural-fabrics)
+### Third-party re-implementations
+0. PyTorch, training code for CIFAR10: [code](https://github.com/vabh/convolutional-neural-fabrics)
 
  
